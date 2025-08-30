@@ -136,8 +136,8 @@ mvn test -Dtest=TestParabank#testAccountsOverview
 
 ## 📌 Roadmap
 
-- [ ] Add CI integration (GitHub Actions or Jenkins)
-- [ ] Add multiple browser support (Firefox, Edge)
-- [ ] Add parallel test execution
+- [ ] Add RestAssured for API testing
+- [ ] Add Integrated CI/CD with GitHub Actions
+- [ ] Add video recording of test runs
 - [ ] Extend Allure with screenshots on failure
 
