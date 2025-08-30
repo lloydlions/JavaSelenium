@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginPage extends BasePage {
 
@@ -16,7 +17,6 @@ public class LoginPage extends BasePage {
 
     public void open() {
         String url = ConfigLoader.getProperty("PARABANK_URL");
-        System.out.println("URL: " + url);
         webDriver.get(url);
         String title = webDriver.getTitle();
         assertEquals("ParaBank | Welcome | Online Banking", title);
@@ -26,10 +26,11 @@ public class LoginPage extends BasePage {
         webDriver.findElement(username).sendKeys(user);
         webDriver.findElement(password).sendKeys(pass);
         webDriver.findElement(loginButton).click();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        assertTrue(webDriver.findElement(By.xpath("//b[text()=\"Welcome\"]")).isDisplayed());
+    }
+
+    public void assertWelcomeElement(){
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        assertTrue(webDriver.findElement(By.xpath("//b[text()=\"Welcome\"]")).isDisplayed());
     }
 }
