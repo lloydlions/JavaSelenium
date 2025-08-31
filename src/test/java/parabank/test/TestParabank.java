@@ -1,5 +1,6 @@
 package parabank.test;
 
+import base.SeleniumBaseTest;
 import io.qameta.allure.*;
 import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(AllureJunit5.class)
 @Epic("Parabank Application")
 @Feature("User Login and Navigation")
-public class TestParabank extends BaseTest {
+public class TestParabank extends SeleniumBaseTest {
 
     @Test
     @Story("User logs in with valid credentials")

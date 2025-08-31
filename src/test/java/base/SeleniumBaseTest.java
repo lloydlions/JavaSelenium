@@ -1,14 +1,14 @@
-package parabank.test;
+package base;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.junit5.AllureJunit5;
-import org.example.framework.DriverManager;
+import org.example.framework.selenium.DriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(AllureJunit5.class)
-public abstract class BaseTest {
+public abstract class SeleniumBaseTest {
 
     @BeforeEach
     public void setup(){
