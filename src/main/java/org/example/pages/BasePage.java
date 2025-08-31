@@ -1,6 +1,6 @@
 package org.example.pages;
 
-import org.example.framework.DriverManager;
+import org.example.framework.selenium.DriverManager;
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
